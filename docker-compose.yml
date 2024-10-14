@@ -1,8 +1,8 @@
 version: '3'
 services:
-  vision-ai-service:
+  vision-ai-dummy-service:
     build: .
-    image: ghcr.io/langrenn-sprint/vision-ai-service:test
+    image: ghcr.io/langrenn-sprint/vision-ai-dummy-service:test
     ports:
       - 8080:8080
     environment:
@@ -16,10 +16,10 @@ services:
       - USERS_HOST_PORT=8080
     volumes:
       - type: bind
-        source: vision_ai_service/config/global_settings.json
+        source: vision_ai_dummy_service/config/global_settings.json
         target: /app/config/global_settings.json
       - type: bind
-        source: vision_ai_service/files
+        source: vision_ai_dummy_service/files
         target: /app/files
       - type: bind
         source: error.log

@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "vision-ai-service"
+name = "vision-ai-dummy-service"
 version = "0.9.0"
 description = "A tool to analyse video stream and detect people crossing line."
 authors = ["Stig B. Dørmænen <stigbd@gmail.com>", "Heming Harnæs <heming.harnaes@gmail.com"]
 license = "Apache-2.0"
 readme = "README.md"
-homepage = "https://github.com/langrenn-sprint/vision-ai-service.git"
-repository = "https://github.com/heming-langrenn/vision-ai-service"
+homepage = "https://github.com/langrenn-sprint/vision-ai-dummy-service.git"
+repository = "https://github.com/heming-langrenn/vision-ai-dummy-service"
 classifiers=[
       "Programming Language :: Python :: 3",
       "License :: OSI Approved :: Apache Software License",
@@ -57,7 +57,7 @@ safety = "^3.2.3"
 poetry = "^1.7.1"
 
 [tool.coverage.paths]
-source = ["vision_ai_service"]
+source = ["vision_ai_dummy_service"]
 
 [tool.coverage.run]
 branch = false
@@ -65,7 +65,7 @@ omit = [
   "*gunicorn_config.py",
   "*db_utils.py",
 ]
-source = ["vision_ai_service"]
+source = ["vision_ai_dummy_service"]
 
 [tool.coverage.report]
 fail_under = 10

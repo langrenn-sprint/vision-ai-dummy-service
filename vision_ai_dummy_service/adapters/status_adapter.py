@@ -9,7 +9,7 @@ from aiohttp import hdrs
 from aiohttp import web
 from dotenv import load_dotenv
 from multidict import MultiDict
-from vision_ai_service.adapters.events_adapter import EventsAdapter
+from vision_ai_dummy_service.adapters.events_adapter import EventsAdapter
 
 # get base settings
 load_dotenv()

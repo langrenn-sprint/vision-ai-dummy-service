@@ -5,8 +5,8 @@ import sys
 import nox
 from nox_poetry import Session, session
 
-package = "vision-ai-service"
-locations = "vision_ai_service", "tests", "noxfile.py"
+package = "vision-ai-dummy-service"
+locations = "vision_ai_dummy_service", "tests", "noxfile.py"
 nox.options.envdir = ".cache"
 nox.options.reuse_existing_virtualenvs = True
 nox.options.stop_on_first_error = True
@@ -69,7 +69,7 @@ def clean(session: Session) -> None:
 def docker_build(session: Session) -> None:
     """Build the Docker image."""
     session.run(
-        "docker", "build", "-t", "ghcr.io/langrenn-sprint/vision-ai-service:test", "."
+        "docker", "build", "-t", "ghcr.io/langrenn-sprint/vision-ai-dummy-service:test", "."
     )
 
 
@@ -119,7 +119,7 @@ def mypy(session: Session) -> None:
     args = session.posargs or [
         "--install-types",
         "--non-interactive",
-        "vision_ai_service",
+        "vision_ai_dummy_service",
         "tests",
     ]
     session.install(".")

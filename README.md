@@ -1,9 +1,9 @@
-# vision-ai-service
+# vision-ai-dummy-service
 
 Analyserer en videostrøm for passeringer (people crossing line). Tar skjermbilde av passeringen. 
 
 Start service: 
-python3 -m vision_ai_service.app
+python3 -m vision_ai_dummy_service.app
 But first, start dependencies (services & db):
 docker-compose up event-service user-service photo-service mongodb
 
@@ -21,8 +21,8 @@ docker-compose up event-service user-service photo-service mongodb
 ### Install
 ```
 
-% git clone https://github.com/heming-langrenn/vision-ai-service.git
-% cd vision-ai-service
+% git clone https://github.com/heming-langrenn/vision-ai-dummy-service.git
+% cd vision-ai-dummy-service
 % pyenv local 3.11
 % poetry install
 ```
@@ -55,4 +55,4 @@ USERS_HOST_PORT=8086
 docker-compose build
 docker login ghcr.io -u <github username>
 password: Use a generated access token from GitHub
-docker push ghcr.io/langrenn-sprint/vision-ai-service:latest
+docker push ghcr.io/langrenn-sprint/vision-ai-dummy-service:latest

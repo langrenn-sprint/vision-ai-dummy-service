@@ -1,1 +1,1 @@
-"""Test suite for the vision-ai-service package."""
+"""Test suite for the vision-ai-dummy-service package."""

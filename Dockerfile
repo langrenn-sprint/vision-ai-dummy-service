@@ -9,19 +9,19 @@ RUN pip install "poetry==1.7.1"
 COPY poetry.lock pyproject.toml /app/
 
 # Docker label
-LABEL org.opencontainers.image.source=https://github.com/langrenn-sprint/vision-ai-service
-LABEL org.opencontainers.image.description="vision-ai-service"
+LABEL org.opencontainers.image.source=https://github.com/langrenn-sprint/vision-ai-dummy-service
+LABEL org.opencontainers.image.description="vision-ai-dummy-service"
 LABEL org.opencontainers.image.licenses=Apache-2.0
 
 # Project initialization:
 RUN poetry config virtualenvs.create false \
   && poetry install --no-dev --no-interaction --no-ansi
 
-ADD vision_ai_service /app/vision_ai_service
+ADD vision_ai_dummy_service /app/vision_ai_dummy_service
 
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 # RUN pip install gunicorn
-# CMD gunicorn  "vision-ai-service:create_app"
-CMD ["python", "-m", "vision_ai_service.app"] 
-# CMD python3 vision_ai_service/app.py
+# CMD gunicorn  "vision-ai-dummy-service:create_app"
+CMD ["python", "-m", "vision_ai_dummy_service.app"] 
+# CMD python3 vision_ai_dummy_service/app.py

@@ -6,16 +6,16 @@ from logging.handlers import RotatingFileHandler
 import os
 
 from dotenv import load_dotenv
-from vision_ai_service.adapters import ConfigAdapter
-from vision_ai_service.adapters import EventsAdapter
-from vision_ai_service.adapters import StatusAdapter
-from vision_ai_service.adapters import UserAdapter
-from vision_ai_service.services import VideoAIService
+from vision_ai_dummy_service.adapters import ConfigAdapter
+from vision_ai_dummy_service.adapters import EventsAdapter
+from vision_ai_dummy_service.adapters import StatusAdapter
+from vision_ai_dummy_service.adapters import UserAdapter
+from vision_ai_dummy_service.services import VideoAIService
 
 # get base settings
 load_dotenv()
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
-photos_file_path = f"{os.getcwd()}/vision_ai_service/files"
+photos_file_path = f"{os.getcwd()}/vision_ai_dummy_service/files"
 event = {"id": ""}
 status_type = ""
 

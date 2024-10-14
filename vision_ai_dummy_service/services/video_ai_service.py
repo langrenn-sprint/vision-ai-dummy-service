@@ -9,9 +9,9 @@ import piexif
 import PIL
 from torch import tensor
 from ultralytics import YOLO
-from vision_ai_service.adapters import ConfigAdapter
-from vision_ai_service.adapters import StatusAdapter
-from vision_ai_service.adapters import VideoStreamNotFoundException
+from vision_ai_dummy_service.adapters import ConfigAdapter
+from vision_ai_dummy_service.adapters import StatusAdapter
+from vision_ai_dummy_service.adapters import VideoStreamNotFoundException
 
 
 class VideoAIService:
